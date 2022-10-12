@@ -1,0 +1,92 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.back{
+background-image:url('https://certifind.com/blog/wp-content/uploads/2017/09/sales.jpg');
+background-repeat: no-repeat;
+background-position:top-right;
+background-size:cover
+}
+
+
+.head{
+    color:rgba(0,255,255,0.9);
+    text-align:center;
+    font-family:Tangerine,serif;
+    font-size:3em
+}
+
+.Inputs{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    font-family:Tangerine,serif;
+}
+
+.box{
+    width: 9rem;
+    height: 1rem;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: rgba(0,255,255,0.2);
+}
+
+::placeholder{
+    font-family:Tangerine,serif;
+    font-size:1.2rem;
+    color:rgba(0,255,255,0.9);
+}
+
+.submission{
+    width: 10rem;
+    height: 1rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color:rgba(0,0,255,0.8);
+    padding:20px,5px;
+    font-align:top;
+}
+
+.container{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.Info1{
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: rgba(0,255,255,0.2);
+    text-align:center;
+    font-family:Tangerine,serif;
+    font-size:2em;
+    color:white;
+}
+
+.Info2{
+    width: 20rem;
+    height: 25rem;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: rgba(0,255,255,0.2);
+    text-align:center;
+    font-family:serif;
+    font-size:1em;
+    color:white;
+}
+
+.box1{
+    font-family:Tangerine,serif;
+    font-size:1.2rem;
+    color:rgba(200,100,255,1);
+    background-color: rgba(0,255,255,0.2);
+    border: 2px solid blue;
+    border-radius: 5px;
+    cursor:pointer;
+}

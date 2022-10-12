@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sales-Prediction</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body class="back">
+  <header class="head" color="red">Big-Mart Sales Predictions</header>
+    <div class="container">
+      <form action={{url_for('predictions')}} method="post" class="Inputs">
+        <input type="text" name="Item_Weight" placeholder="Item_Weight" class="box" required="please enter"/><br>
+        <input type="text" name="Item_MRP" placeholder="Item_MRP" class="box" required="please enter"/><br>
+        <input type="text" name="Item_Visibility" placeholder="Item_Visibility" class="box" required="please enter"/><br>
+        <input type="text" name="Item_Identifier" placeholder="Item_Identifier" class="box" required="please enter"/><br>
+        <select name="Item_Fat_Content"  class="box1" required="please enter"/>
+          <option disabled selected>FatContent</option>
+          <option value="LF">Low Fat</option>
+          <option value="reg">Regular</option>
+          </select><br>
+        <select name="Item_Type"  class="box1" required="please enter"/>
+          <option disabled selected>Item Type</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Soft Drinks">Soft Drinks</option>
+          <option value="Meat">Meat</option>
+          <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+          <option value="Household">Household</option>
+          <option value="Baking Goods">Baking Goods</option>
+          <option value="Snack Foods">Snack Foods</option>
+          <option value="Frozen Foods">Frozen Foods</option>
+          <option value="Breakfast">BreakFast</option>
+          <option value="Health and Hygiene">Health and Hygiene</option>
+          <option value="Hard Drinks">Hard Drinks</option>
+          <option value="Canned">Canned</option>
+          <option value="Breads">Breads</option>
+          <option value="Starchy Foods">Starchy Foods</option>
+          <option value="Seafood">Seafood</option>
+          <option value="Others">Others</option>
+          </select><br>
+        <select name="Outlet Identifier"  class="box1" required="please enter"/>
+          <option disabled selected>Outlet Identifier</option>
+          <option value="OUT049">OUT049</option>
+          <option value="OUT018">OUT018</option>
+          <option value="OUT010">OUT010</option>
+          <option value="OUT013">OUT013</option>
+          <option value="OUT027">OUT027</option>
+          <option value="OUT045">OUT045</option>
+          <option value="OUT017">OUT017</option>
+          <option value="OUT046">OUT046</option>
+          <option value="OUT035">OUT035</option>
+          <option value="OUT019">OUT019</option>
+          </select><br>
+        <select name="Outlet Size"  class="box1" required="please enter"/>
+          <option disabled selected>Outlet Size</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Small">Small</option>
+          </select><br>
+        <select name="Outlet Location Type"  class="box1" required="please enter"/>
+          <option disabled selected>Location</option>
+          <option value="Tier 1">Tier1</option>
+          <option value="Tier 2">Tier2</option>
+          <option value="Tier 3">Tier3</option>
+          </select><br>
+        <select name="Outlet Type"  class="box1" required="please enter"/>
+          <option disabled selected>Outlet Type</option>
+          <option value="Grocery Store">Grocery Store</option>
+          <option value="Supermarket Type1">Supermarket Type1</option>
+          <option value="Supermarket Type2">Supermarket Type2</option>
+          <option value="Supermarket Type3">Supermarket Type3</option>
+          </select><br>
+        <select name="Outlet Establishment Year"  class="box1" required="please enter"/>
+          <option disabled selected>Establishment Year</option>
+          <option value="1985">1985</option>
+          <option value="1987">1987</option>
+          <option value="1997">1997</option>
+          <option value="1998">1998</option>
+          <option value="1999">1999</option>
+          <option value="2002">2002</option>
+          <option value="2004">2004</option>
+          <option value="2007">2007</option>
+          <option value="2009">2009</option>
+          </select><br>
+        <input type="submit" value="Submit" class="submission">
+      </form>
+      <span class="Info1">
+        <label>Predicted Sales:</label><br><br>{{prediction_result}}
+      </span>
+      <span class="Info2">
+        <ul>
+            <li>Model is based on Big Mart Sales Data</li><br>
+            <li>Item Identifier Values starts with FD,DR,NC(Ex:FDA13)</li><br>
+            <li>Item Visibility ranges between:<br>0.003575 and 0.003575</li><br>
+            <li>Item MRP lies between:<br>31.29 and 266.668</li><br>
+            <li>Item weight lies between:<br>9.31 and 21.35</li><br>
+            <li>The data is collected for 2013 across 10 stores in different cities for 1559 products</li><br>
+            <li>Accuracy(r2 score):(acc)59.996% nearly 60%(apx)</li><br>
+            <li>RMSE VALUE:1029</li>
+        </ul>
+      </span>
+    </div>
+</body>
+
+</html>
