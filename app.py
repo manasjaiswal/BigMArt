@@ -4,8 +4,6 @@ import numpy as np
 import pickle
 
 regressor=pickle.load(open('bigmart_pred','rb'))
-test_data=pd.read_csv('test (1).csv')
-item_list=list(test_data['Item_Identifier'].unique())
 li=[{'DR': 1496.7184, 'FD': 1810.976, 'NC': 1874.8928},
  {'LF': 1765.0358, 'reg': 1844.5989},
  {'Baking Goods': 1577.946,
